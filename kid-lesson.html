@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fun Tennis</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500&family=Nunito:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </head>
+  <body>
+   <!-- Navbar Start -->
+  <nav class="bg-[#25a4ee] max-w-full fixed z-50 w-full top-0 pl-10 pr-6 py-3 shadow-md md:flex md:items-center md:justify-between transition-all ease-in duration-500">
+    <div class="flex justify-between items-center ">
+        <a href="#">
+          <!-- <span class="text-yellow-200 [text-shadow:2px_2px_2px_var(--tw-shadow-color)] shadow-slate-400 text-3xl font-bold uppercase my-auto"
+            style="font-family: 'M PLUS Rounded 1c';">
+            FUN TENNIS
+          </span> -->
+  
+          <img src="img/logo-removebg-preview.png" class="max-md:w-70 max-lg:w-80 shrink-0 lg:h-20 md:h-20 max-sm:w-48 -ml-2">
+        </a>
+        <span class="text-3xl cursor-pointer mx-2 md:hidden block">
+          <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+        </span>
+      </div>
+  
+      <ul
+        class="bg-[#25a4ee] md:flex md:items-center z-[-1] md:z-auto md:static absolute w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
+        <li class="mx-4 my-6 md:my-0">
+          <a href="index.html" class="text-xl hover:text-cyan-400 duration-500">Home</a>
+        </li>
+        <li class="mx-4 my-6 md:my-0">
+          <a href="#" class="text-xl hover:text-cyan-400 duration-500">Lessons</a>
+        </li>
+        <li class="mx-4 my-6 md:my-0">
+          <a href="training.html" class="text-xl hover:text-cyan-400 duration-500">Training</a>
+        </li>
+        <li class="mx-4 my-6 md:my-0">
+          <a href="blog.html" class="text-xl hover:text-cyan-400 duration-500">Blog</a>
+        </li>
+        <li class="mx-4 my-6 md:my-0">
+          <a href="about-us.html" class="text-xl hover:text-cyan-400 duration-500">About Us</a>
+        </li>
+        <li class="mx-4 my-6 md:my-0">
+          <a href="join-us.html" class="text-xl hover:text-cyan-400 duration-500">Join Us</a>
+        </li>
+  
+        <a href="sign-up.html">
+          <div
+          class="bg-black text-white duration-300 hover:bg-slate-500 text-center text-lg leading-6 items-stretch mx-4 px-10 py-3 rounded-md max-md:px-5">
+          Sign In
+        </div>
+        </a>
+      </ul>
+    </nav>
+    <!-- Navbar End -->
+
+    <div class="max-w-full w-full mt-44 text-balance justify-center">
+      <h1 class="text-4xl font-medium text-center text-black">KID LESSONS</h1>
+      <p
+        class="mt-20 text-xl leading-8 text-center text-black px-10 md:px-20 max-md:mt-10 max-md:max-w-full"
+      >
+        Tennis basics for kids: grip, stance, swing. Fun drills, teamwork, and
+        games make learning enjoyable and interactive.
+      </p>
+    </div>
+
+    <div
+      class="flex justify-center items-center px-8 md:px-56 self-stretch py-12 mt-10 w-full bg-white max-md:px-5 max-md:max-w-full"
+    >
+      <div class="mt-32 mb-20 max-w-full max-md:my-10">
+        <div class="flex gap-5 max-md:flex-col max-md:gap-0 max-md:">
+          <div class="flex flex-col w-[54%] max-md:ml-0 max-md:w-full">
+            <div
+              class="flex flex-col text-sm text-black max-md:mt-10 max-md:max-w-full"
+            >
+              <h1 class="text-3xl text-center font-medium md:text-start max-md:max-w-full">Our Program</h1>
+              <ul class="mt-7 text-lg leading-6 max-md:max-w-full">
+                <li>
+                 - We offer a range of specifically designed programs for ages 4
+                  -18 to help develop a strong fundamental base from an early
+                  stage.
+                </li>
+                <li>
+                 - We offer group and private classes 7 days a week from 8am to
+                  7pm.
+                </li>
+                <li>
+                 - We also offer Spring, Summer, Thanksgiving and Winter holiday
+                  camps every year
+                </li>
+              </ul>
+              </p>
+              <div
+                class="mt-14 leading-5 text-black text-opacity-60 max-md:mt-10 max-md:max-w-full"
+              >
+                "Tennis is all about laughter, good vibes, and a wicked
+                backhand. So, let's smack some smiles onto that court and enjoy
+                every swing!"
+              </div>
+              <div
+                class="flex gap-2 self-start mt-3 whitespace-nowrap leading-[136%]"
+              >
+                <div class="grow self-start mt-2">Dhaka Oke, Tennis Coach</div>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col ml-5 w-[70%] max-md:ml-0 max-md:w-full">
+            <div class="mx-auto mt-8 max-w-full h-[450px] w-full max-md:mt-10">
+              <img class="w-full h-full object-cover" src="img/kid-group.jpg" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="justify-center items-center self-stretch text-balance px-8 md:px-56 pt-16 pb-20 w-full"
+    >
+      <p
+        class="text-xl leading-8 text-black bg-white max-md:px-5 max-md:max-w-full"
+      >
+        Overview: Children have a great capacity to learn and typically pick up
+        new skills quickly. It is therefore advantageous to learn to play tennis
+        at a young age, as they will grow up to have a solid foundation in a
+        sport that can be enjoyed for life.
+        <br />
+        <br />
+        Our coaches will introduce tennis in a fun and engaging way. We will
+        build your kid’s interest in tennis through meaningful activities that
+        train hand-eye coordination, balance, and agility. Your child will feel
+        a sense of pride from being able to hit his or her first ball over the
+        net!
+      </p>
+    </div>
+
+    <div class="flex flex-col items-center max-w-full bg-white px-8 md:px-52">
+      <div
+        class="flex flex-col mt-12 w-full text-3xl leading-10 text-black bg-white max-md:mt-10 max-md:max-w-full"
+      >
+        <div
+          class="flex gap-5 justify-between px-5 max-md:flex-wrap max-md:max-w-full"
+        >
+          <p class="flex-auto self-end text-xl md:text-3xl mt-6 max-md:max-w-full">
+            WEEK 1: INTRODUCTION TO TENNIS
+          </p>
+          <img
+            loading="lazy"
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/efbf6d862e88779e2211ae99998910dcc7bb8d0e1dc55d8bde7dadb4b760fba2?"
+            class="w-8 md:w-12 aspect-square"
+          />
+        </div>
+        <div class="shrink-0 mt-5 h-px bg-black max-md:max-w-full"></div>
+      </div>
+      <div
+        class="flex flex-col mt-12 w-full text-3xl leading-10 text-black bg-white max-md:mt-10 max-md:max-w-full"
+      >
+        <div
+          class="flex gap-5 justify-between px-5 max-md:flex-wrap max-md:max-w-full"
+        >
+          <p class="flex-auto self-end text-xl md:text-3xl mt-6 max-md:max-w-full">
+            WEEK 2: MOVEMENT, FOOTWORK
+          </p>
+          <img
+            loading="lazy"
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/efbf6d862e88779e2211ae99998910dcc7bb8d0e1dc55d8bde7dadb4b760fba2?"
+            class="w-8 md:w-12 aspect-square"
+          />
+        </div>
+        <div class="shrink-0 mt-5 h-px bg-black max-md:max-w-full"></div>
+      </div>
+      <div
+        class="flex flex-col mt-12 w-full text-3xl leading-10 text-black bg-white max-md:mt-10 max-md:max-w-full"
+      >
+        <div
+          class="flex gap-5 justify-between px-5 max-md:flex-wrap max-md:max-w-full"
+        >
+          <p class="flex-auto self-end text-xl md:text-3xl mt-6 max-md:max-w-full">
+            WEEK 3: BASIC GROUND STROKE
+          </p>
+          <img
+            loading="lazy"
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/efbf6d862e88779e2211ae99998910dcc7bb8d0e1dc55d8bde7dadb4b760fba2?"
+            class="w-8 md:w-12 aspect-square"
+          />
+        </div>
+        <div class="shrink-0 mt-5 h-px bg-black max-md:max-w-full"></div>
+      </div>
+
+      <div
+        class="flex flex-col mt-12 w-full text-3xl leading-10 text-black bg-white max-md:mt-10 max-md:max-w-full"
+      >
+        <div
+          class="flex gap-5 justify-between px-5 max-md:flex-wrap max-md:max-w-full"
+        >
+          <p class="flex-auto self-end text-xl md:text-3xl mt-6 max-md:max-w-full">
+            WEEK 4: NET PLAY
+          </p>
+          <img
+            loading="lazy"
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/efbf6d862e88779e2211ae99998910dcc7bb8d0e1dc55d8bde7dadb4b760fba2?"
+            class="w-8 md:w-12 aspect-square"
+          />
+        </div>
+        <div class="shrink-0 mt-5 h-px bg-black max-md:max-w-full"></div>
+      </div>
+      <div class="mt-52 text-3xl text-center text-black max-md:mt-20">
+        Pick Your Lesson
+      </div>
+      <p
+        class="mt-9 text-base md:text-lg leading-6 text-center text-black max-md:max-w-full">
+        “Tiny racquets, big dreams! Kids on the court, bouncing with joy,
+        turning every serve into a smashing adventure.”
+      </p>
+
+      <div id="controls-carousel" class="relative w-full mt-9" data-carousel="slide">
+        <!-- Carousel wrapper -->
+        <div class="relative overflow-hidden h-[400px] md:h-[545px]">
+          <!-- Item 1 -->
+          <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img
+              src="img/2014-09-15-tennis4-thumb.jpg"
+              class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+              alt="..."
+            />
+          </div>
+          <!-- Item 2 -->
+          <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+            <img
+              src="img/kid-pair.jpg"
+              class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+              alt="..."
+            />
+          </div>
+          <!-- Item 3 -->
+          <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img
+              src="img/kid-group (2).jpg"
+              class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+              alt="..."
+            />
+          </div>
+          <!-- Item 4 -->
+          <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img
+              src="img/kid-group.jpg"
+              class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+              alt="..."
+            />
+          </div>
+        </div>
+        <!-- Slider controls -->
+        <button
+          type="button"
+          class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+          data-carousel-prev
+        >
+          <span
+            class="inline-flex items-center justify-center w-10 h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+          >
+            <svg
+              class="w-4 h-4 text-white white rtl:rotate-180"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 6 10"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M5 1 1 5l4 4"
+              />
+            </svg>
+            <span class="sr-only">Previous</span>
+          </span>
+        </button>
+        <button
+          type="button"
+          class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+          data-carousel-next
+        >
+          <span
+            class="inline-flex items-center justify-center w-10 h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+          >
+            <svg
+              class="w-4 h-4 text-white white rtl:rotate-180"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 6 10"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m1 9 4-4-4-4"
+              />
+            </svg>
+            <span class="sr-only">Next</span>
+          </span>
+        </button>
+      </div>
+  
+      <div
+        class="flex justify-center items-center self-stretch px-16 py-12 mt-44 w-full font-medium text-center text-black max-md:px-5 max-md:mt-10 max-md:max-w-full">
+        <div
+          class="flex flex-col items-center mt-32 mb-32 max-w-full w-[637px] max-md:my-10">
+          <p
+            class="self-stretch text-6xl leading-[52.48px] max-md:max-w-full max-md:text-4xl"
+          >
+            Interested? Book Now!
+          </p>
+          <p
+            class="mt-20 text-xl leading-7 w-full max-md:mt-10 max-md:max-w-full"
+          >
+            Dive into endless possibilities! Click to sign up now.
+          </p>
+          <button
+            data-modal-target="default-modal"
+            data-modal-toggle="default-modal"
+            class="block justify-center items-center px-16 py-6 mt-10 max-w-full text-lg text-white bg-black rounded-md w-[280px] max-md:px-5 text-center hover:bg-slate-500 transition-colors"
+            type="button"
+          >
+            Sign Up
+          </button>
+  
+          <!-- Main modal -->
+          <div
+            id="default-modal"
+            tabindex="-1"
+            aria-hidden="true"
+            class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full transition-opacity duration-300 ease-in-out"
+          >
+            <div class="relative p-4 w-full max-w-2xl max-h-full">
+              <div class="bg-white w-full h-full px-10 py-5 flex flex-col">
+                <button
+                  data-modal-hide="default-modal"
+                  type="button"
+                  class="self-end"
+                >
+                  <img
+                    src="img/4115230_cancel_close_delete_icon.png"
+                    alt="Close Modal"
+                  />
+                </button>
+                <script
+                  src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer
+                ></script>
+                <div
+                  class="elfsight-app-a8999764-c0b2-4d57-b572-58975681d1f5" data-elfsight-app-lazy
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section>
+      
+    </section>
+    
+
+    <!-- Footer Start -->
+    <footer>
+      <div
+        class="max-w-full bg-[#25a4ee] self-stretch flex w-full flex-col justify-center items-center px-16 py-12 max-md:max-w-full max-md:px-5"
+      >
+        <div
+          class="flex w-full max-w-[1110px] justify-between gap-5 mt-20 mb-10 items-start max-md:max-w-full max-md:flex-wrap max-md:mt-10"
+        >
+          <div class="flex flex-col items-stretch">
+            <!-- <span class="text-yellow-200 [text-shadow:2px_2px_2px_var(--tw-shadow-color)] shadow-slate-400 text-3xl font-bold uppercase my-auto"
+            style="font-family: 'M PLUS Rounded 1c';">
+            FUN TENNIS
+          </span> -->
+            <img
+              src="img/logo-removebg-preview.png"
+              class="max-md:w-70 md:h-20 max-sm:w-48 -ml-2"
+            />
+            <div class="text-black text-sm leading-5 mt-7">© 2010 — 2020</div>
+            <div class="text-black text-sm leading-5 whitespace-nowrap mt-6">
+              All Rights Reserved
+            </div>
+          </div>
+          <div
+            class="self-stretch flex items-start justify-between gap-5 max-md:max-w-full max-md:flex-wrap"
+          >
+            <div class="self-stretch flex flex-col items-stretch">
+              <div class="text-black text-sm font-bold leading-5">MENU</div>
+              <div class="text-black text-sm leading-5 mt-9">Home</div>
+              <div class="text-black text-sm leading-5 whitespace-nowrap mt-7">
+                Lessons
+              </div>
+              <div class="text-black text-sm leading-5 whitespace-nowrap mt-7">
+                Train with Us
+              </div>
+              <div class="text-black text-sm leading-5 mt-7">Blog</div>
+            </div>
+            <div class="flex grow flex-col items-stretch self-start">
+              <div class="text-black text-sm font-bold leading-5">INFO</div>
+              <div class="text-black text-sm leading-5 mt-9">About Us</div>
+              <div class="text-black text-sm leading-5 mt-7">
+                Privacy policy
+              </div>
+              <div class="text-black text-sm leading-5 whitespace-nowrap mt-6">
+                Terms and conditions
+              </div>
+            </div>
+            <div class="flex basis-[0%] flex-col items-stretch self-start">
+              <div
+                class="text-black text-sm font-bold leading-5 whitespace-nowrap"
+              >
+                ACCOUNT
+              </div>
+              <div class="text-black text-sm leading-5 whitespace-nowrap mt-9">
+                My account
+              </div>
+              <div class="text-black text-sm leading-5 mt-6">FAQ</div>
+            </div>
+            <div class="flex-grow flex-col items-center self-start">
+              <div
+                class="text-black text-sm font-bold leading-5 whitespace-nowrap"
+              >
+                SOCIAL
+              </div>
+              <div class="flex mt-2 items-start">
+                <a href="https://www.instagram.com/funtennis.sg/"
+                  ><img
+                    class="aspect-square object-contain object-center w-10 h-10 overflow-hidden max-w-full"
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/d49c834ee0249f2f54b9efa75b6111fdf0de4eefaad655978bd3d681c0c2a748?apiKey=a2ab9e7083ae495bb6bdcc051a57be6e&"
+                    alt="Instagram"
+                /></a>
+                <a href="https://www.youtube.com/@funtennis2875"
+                  ><img
+                    class="aspect-square object-contain object-center w-10 h-10 overflow-hidden max-w-full ml-2"
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/78fd881cd5328c5b3e64f6c1081a544ca0a41d555f6e90551836cdd153a38598?apiKey=a2ab9e7083ae495bb6bdcc051a57be6e&"
+                    alt="YouTube"
+                /></a>
+                <!-- <a href="#"><img
+                  class="aspect-[0.97] object-contain object-center w-[35px] h-[35px] overflow-hidden max-w-full ml-2"
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/152932d5204cf80aaf470f2fbe54226df4edd0be2b9064403ce08e2ceb509057?apiKey=a2ab9e7083ae495bb6bdcc051a57be6e&"
+                  alt="X"></a> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Footer End -->
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var introSection = document.getElementById("intro-section");
+        var videoSection = document.getElementById("video-section");
+        var signUpSection = document.getElementById("sign-up-section");
+        var navigationBar = document.querySelector("nav");
+      
+        // Handle scroll behavior
+        function handleScroll() {
+          // Get the bounding rectangles of sections
+          var introSectionRect = introSection.getBoundingClientRect();
+          var videoSectionRect = videoSection.getBoundingClientRect();
+          var signUpSectionRect = signUpSection.getBoundingClientRect();
+      
+          var introSectionBottom = introSectionRect.bottom;
+          var videoSectionBottom = videoSectionRect.bottom;
+          var signUpSectionBottom = signUpSectionRect.bottom;
+      
+          if (window.innerWidth > 768) {
+            if (introSectionBottom < 0 && videoSectionBottom > 0) {
+              hideNavigationBar();
+            } else if (signUpSectionBottom < 0) {
+              hideNavigationBar();
+            } else {
+              showNavigationBar();
+            }
+          } else {
+            if (signUpSectionBottom < 0) {
+              hideNavigationBar();
+            } else {
+              showNavigationBar();
+            }
+          }
+        }
+      
+        // Function to hide navigation bar
+        function hideNavigationBar() {
+          navigationBar.style.opacity = "0";
+          navigationBar.style.top = "-100px";
+        }
+      
+        // Function to show navigation bar
+        function showNavigationBar() {
+          navigationBar.style.opacity = "1";
+          navigationBar.style.top = "0";
+        }
+      
+        // Add event listener for scroll
+        window.addEventListener("scroll", handleScroll);
+      
+        // Trigger the handleScroll function once on page load
+        handleScroll();
+      });
+      </script>
+      
+      <script>
+        function Menu(e) {
+          let list = document.querySelector('ul');
+      
+          function toggleIcon() {
+            if (e.name === 'menu') {
+              e.name = "close";
+            } else if (e.name === 'close') {
+              e.name = "menu";
+            }
+          }
+      
+          if (e.name === 'menu') {
+            e.name = "close";
+            list.classList.add('top-[60px]', 'opacity-100');
+          } else if (e.name === 'close') {
+            e.name = "menu";
+            list.classList.remove('top-[60px]', 'opacity-100');
+          }
+      
+          document.addEventListener('click', (event) => {
+            if (!list.contains(event.target) && event.target !== e) {
+              list.classList.remove('opacity-100', 'top-[60px]');
+              list.classList.add('opacity-0');
+              list.addEventListener('transitionend', toggleIcon, { once: true });
+            }
+          });
+        }
+      </script>
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+
+  </body>
+</html>
