@@ -17,8 +17,8 @@
 </head>
 
 <body class="bg-[#25a4ee]">
-  <!-- Navbar Start -->
-  <nav class="bg-[#25a4ee] max-w-full fixed z-50 w-full top-0 pl-10 pr-6 py-3 shadow-md md:flex md:items-center md:justify-between transition-all ease-in duration-500">
+<!-- Navbar Start -->
+<nav class="bg-[#25a4ee] max-w-full fixed z-50 w-full top-0 pl-10 pr-6 py-3 shadow-md md:flex md:items-center md:justify-between transition-all ease-in duration-500">
   <div class="flex justify-between items-center ">
       <a href="#">
         <!-- <span class="text-yellow-200 [text-shadow:2px_2px_2px_var(--tw-shadow-color)] shadow-slate-400 text-3xl font-bold uppercase my-auto"
@@ -39,22 +39,28 @@
         <a href="index.html" class="block text-xl hover:text-cyan-400 duration-500">Home</a>
       </li>
       <li class="mx-4 my-6 md:my-0">
-        <button id="lesson-dropdown-button" data-collapse-toggle="lesson-dropdown" class="flex items-center justify-between text-xl w-full md:w-auto hover:text-cyan-400 duration-500">Lessons <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+        <button id="lesson-dropdown-button" 
+        data-collapse-toggle="lesson-dropdown"
+        onclick="rotateButton('button-icon-lesson')" 
+        class="flex items-center justify-between text-xl w-full md:w-auto hover:text-cyan-400 duration-500">Lessons <svg id="button-icon-lesson" class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
           <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
         </svg></button>
 
-        <div id="lesson-dropdown" class="absolute mt-1 hidden border-gray-200 shadow-sm bg-gray-50 md:bg-white dark:bg-gray-800 dark:border-gray-600">
+        <div id="lesson-dropdown" class="absolute hidden mt-1 border-gray-200 shadow-sm bg-gray-50 md:bg-white dark:bg-gray-800 dark:border-gray-600">
           <div class="flex-col px-4 py-5 mx-auto text-gray-900 dark:text-white sm:grid-cols-2 md:px-6">
               <ul>
                   <li>
-                    <div class="flex items-center justify-between">
+                    <div class="flex items-center justify-between gap-[58px]">
                       <a href="kid-lesson.html" class="block text-xl hover:text-cyan-400 duration-500 whitespace-nowrap">Kid Lessons</a>
-                      <button id="lesson-dropdown-button" data-collapse-toggle="kid-lesson-dropdown" class="flex items-center justify-between text-xl w-full md:w-auto hover:text-cyan-400 duration-500">
-                        <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                      <button id="lesson-dropdown-button" 
+                      data-collapse-toggle="kid-lesson-dropdown"
+                      onclick="rotateButton('button-icon-kid-lesson')"  
+                      class="flex items-center justify-between text-xl w-full md:w-auto hover:text-cyan-400 duration-500">
+                        <svg id="button-icon-kid-lesson" class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
                       </svg></button>
                     </div>                  
-                    <div id="kid-lesson-dropdown" class="mt-1 border-gray-200 shadow-sm bg-gray-50 md:bg-white border-y dark:bg-gray-800 dark:border-gray-600">
+                    <div id="kid-lesson-dropdown" class="mt-1 hidden md:visible border-gray-200 shadow-sm bg-gray-50 md:bg-white border-y dark:bg-gray-800 dark:border-gray-600">
                       <div class="flex-col px-4 py-5 mx-auto text-gray-900 dark:text-white sm:grid-cols-2 md:px-6">
                           <ul>
                               <li>
@@ -71,14 +77,17 @@
                     </div>
                   </li>
                   <li>
-                    <div class="flex items-center justify-between">
+                    <div class="flex items-center justify-between gap-[40px]">
                       <a href="adult-lesson.html" class="block text-xl hover:text-cyan-400 duration-500 whitespace-nowrap">Adult Lessons</a>
-                      <button id="adult-lesson-dropdown-button" data-collapse-toggle="adult-lesson-dropdown" class="flex text-xl w-full md:w-auto hover:text-cyan-400 duration-500">
-                        <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                      <button id="adult-lesson-dropdown-button" 
+                      data-collapse-toggle="adult-lesson-dropdown" 
+                      onclick="rotateButton('button-icon-adult-lesson')"  
+                      class="flex text-xl w-full md:w-auto hover:text-cyan-400 duration-500">
+                        <svg id="button-icon-adult-lesson" class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
                       </svg></button>
                     </div>
-                    <div id="adult-lesson-dropdown" class="mt-1 border-gray-200 shadow-sm bg-gray-50 md:bg-white border-y dark:bg-gray-800 dark:border-gray-600">
+                    <div id="adult-lesson-dropdown" class="mt-1 hidden md:visible border-gray-200 shadow-sm bg-gray-50 md:bg-white border-y dark:bg-gray-800 dark:border-gray-600">
                       <div class="flex-col px-4 py-5 mx-auto text-gray-900 dark:text-white sm:grid-cols-2 md:px-6">
                           <ul>
                               <li>
@@ -697,6 +706,14 @@ document.addEventListener("DOMContentLoaded", function () {
   // Trigger the handleScroll function once on page load
   handleScroll();
 });
+</script>
+
+    
+<script>
+  function rotateButton(buttonId) {
+      const buttonIcon = document.getElementById(buttonId);
+      buttonIcon.classList.toggle('rotate-180');
+  }
 </script>
 
 <script>
