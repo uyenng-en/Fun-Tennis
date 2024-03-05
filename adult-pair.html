@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fun Tennis</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500&family=Nunito:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </head>
+  <body>
+   <!-- Navbar Start -->
+   <nav id="navbar" class="bg-[#25a4ee] max-w-full fixed z-50 w-full top-0 pl-10 pr-6 py-3 shadow-md md:flex md:items-center md:justify-between transition-all ease-in duration-500">
+    <div class="flex justify-between items-center ">
+        <a href="index.html">
+          <!-- <span class="text-yellow-200 [text-shadow:2px_2px_2px_var(--tw-shadow-color)] shadow-slate-400 text-3xl font-bold uppercase my-auto"
+            style="font-family: 'M PLUS Rounded 1c';">
+            FUN TENNIS
+          </span> -->
+  
+          <img src="img/logo-removebg-preview.png" class="max-md:w-70 max-lg:w-80 shrink-0 lg:h-20 md:h-20 max-sm:w-48 -ml-2">
+        </a>
+        <span class="text-3xl cursor-pointer mx-2 md:hidden block">
+          <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+        </span>
+      </div>
+  
+      <ul
+        class="bg-[#25a4ee] md:flex md:items-center z-[-1] md:z-auto md:static absolute w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
+        <li class="mx-4 my-6 md:my-0">
+          <a href="index.html" class="block text-xl hover:text-cyan-400 duration-500">Home</a>
+        </li>
+        <li class="mx-4 my-6 md:my-0">
+          <button id="lesson-dropdown-button" 
+          data-collapse-toggle="lesson-dropdown"
+          onclick="rotateButton('button-icon-lesson')" 
+          class="flex items-center justify-between text-xl w-full md:w-auto hover:text-cyan-400 duration-500">Lessons <svg id="button-icon-lesson" class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+          </svg></button>
+  
+          <div id="lesson-dropdown" class="absolute hidden mt-1 border-gray-200 shadow-sm bg-gray-50 md:bg-white dark:bg-gray-800 dark:border-gray-600">
+            <div class="flex-col px-4 py-5 mx-auto text-gray-900 dark:text-white sm:grid-cols-2 md:px-6">
+                <ul>
+                    <li>
+                      <div class="flex items-center justify-between gap-[58px]">
+                        <a href="kid-lesson.html" class="block text-xl hover:text-cyan-400 duration-500 whitespace-nowrap">Kid Lessons</a>
+                        <button id="lesson-dropdown-button" 
+                        data-collapse-toggle="kid-lesson-dropdown"
+                        onclick="rotateButton('button-icon-kid-lesson')"  
+                        class="flex items-center justify-between text-xl w-full md:w-auto hover:text-cyan-400 duration-500">
+                          <svg id="button-icon-kid-lesson" class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                        </svg></button>
+                      </div>                  
+                      <div id="kid-lesson-dropdown" class="mt-1 hidden md:visible border-gray-200 shadow-sm bg-gray-50 md:bg-white border-y dark:bg-gray-800 dark:border-gray-600">
+                        <div class="flex-col px-4 py-5 mx-auto text-gray-900 dark:text-white sm:grid-cols-2 md:px-6">
+                            <ul>
+                                <li>
+                                  <a href="kid-private.html" class="block text-xl hover:text-cyan-400 duration-500">Kid Private 1-1</a>
+                                </li>
+                                <li>
+                                  <a href="kid-pair.html" class="block text-xl hover:text-cyan-400 duration-500">Kid Pair</a>
+                                </li>
+                                <li>
+                                  <a href="kid-group.html" class="block text-xl hover:text-cyan-400 duration-500">Kid Group</a>
+                                </li>
+                            </ul>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="flex items-center justify-between gap-[40px]">
+                        <a href="adult-lesson.html" class="block text-xl hover:text-cyan-400 duration-500 whitespace-nowrap">Adult Lessons</a>
+                        <button id="adult-lesson-dropdown-button" 
+                        data-collapse-toggle="adult-lesson-dropdown" 
+                        onclick="rotateButton('button-icon-adult-lesson')"  
+                        class="flex text-xl w-full md:w-auto hover:text-cyan-400 duration-500">
+                          <svg id="button-icon-adult-lesson" class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                        </svg></button>
+                      </div>
+                      <div id="adult-lesson-dropdown" class="mt-1 hidden md:visible border-gray-200 shadow-sm bg-gray-50 md:bg-white border-y dark:bg-gray-800 dark:border-gray-600">
+                        <div class="flex-col px-4 py-5 mx-auto text-gray-900 dark:text-white sm:grid-cols-2 md:px-6">
+                            <ul>
+                                <li>
+                                  <a href="adult-private.html" class="block text-xl hover:text-cyan-400 duration-500">Adult Private 1-1</a>
+                                </li>
+                                <li>
+                                  <a href="adult-pair.html" class="block text-xl hover:text-cyan-400 duration-500">Adult Pair</a>
+                                </li>
+                                <li>
+                                  <a href="adult-group.html" class="block text-xl hover:text-cyan-400 duration-500">Adult Group</a>
+                                </li>
+                            </ul>
+                        </div>
+                      </div>
+                    </li>
+                </ul>
+            </div>
+          </div>
+        </li>
+        <li class="mx-4 my-6 md:my-0">
+          <a href="training.html" class="block text-xl hover:text-cyan-400 duration-500">Training</a>
+          <!-- <button id="training-dropdown-button" data-collapse-toggle="training-dropdown" class="flex items-center justify-between text-xl w-full md:w-auto hover:text-cyan-400 duration-500">
+            <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+          </svg></button> -->
+        </li>
+        <li class="mx-4 my-6 md:my-0">
+          <a href="blog.html" class="block text-xl hover:text-cyan-400 duration-500">Blog</a>
+        </li>
+        <li class="mx-4 my-6 md:my-0">
+          <a href="about-us.html" class="block text-xl hover:text-cyan-400 duration-500">About Us</a>
+        </li>
+        <li class="mx-4 my-6 md:my-0">
+          <a href="join-us.html" class="block text-xl hover:text-cyan-400 duration-500">Join Us</a>
+        </li>
+  
+        <a href="sign-up.html">
+          <div
+          class="bg-black text-white duration-300 hover:bg-slate-500 text-center text-lg leading-6 items-stretch mx-4 px-10 py-3 rounded-md max-md:px-5">
+          Sign In
+        </div>
+        </a>
+      </ul>
+    </div>
+  
+    </nav>
+    <!-- Navbar End -->
+
+    <div class="max-w-full w-full mt-44 text-balance justify-center">
+      <h1 class="text-4xl font-medium text-center text-black">ADULT PAIR</h1>
+      <p
+        class="mt-20 text-xl leading-8 text-center whitespace-normal text-black px-10 md:px-20 max-md:mt-10 max-md:max-w-full"
+      >
+        Doubles Dynamism: Unveiling the Pleasures and Gains of Adult Pair Lessons
+      </p>
+    </div>
+
+    <div class="mt-12 justify-center shrink-0 px-6 md:px-48">
+        <img src="img/captured-moment-17.png" class="object-cover w-full h-full">
+    </div>
+
+    <div
+      class="justify-center items-center self-stretch text-balance px-3 md:px-56 pt-16 pb-20 w-full"
+    >
+      <div
+        class="text-xl leading-8 text-black bg-white max-md:px-5 max-md:max-w-full">
+        <h1 class="whitespace-normal">
+            Dive into a dynamic tennis experience designed for kill enhancement with our Adult Pair Tennis Lessons. Whether you're a beginner duo or a seasoned team looking to refine your game, these lessons offer a unique blend of teamwork, strategy, and personalized coaching.        
+        </h1>
+        <ul>
+            <li class="whitespace-pre-line">
+                <strong>1.Team Building::</strong>
+                Forge a strong connection with your partner as you engage in interactive drills and exercises. Adult pair lessons foster teamwork, communication, and a sense of camaraderie, creating a fun and supportive learning environment.            
+            </li>
+            <li class="whitespace-pre-line ">
+                <strong>2.Social Development:</strong>
+                Tennis is not just about forehands and backhands; it's also about forming connections. Pair lessons offer the opportunity to socialize and develop friendships through a shared interest. The collaborative nature of doubles tennis helps in building social skills, to work together and support each other.            
+            </li>
+            <li class="whitespace-pre-line">
+                <strong>3.Strategic Play:</strong>
+                Delve into strategic play with lessons that focus on doubles tactics, positioning, and effective communication on the court. Learn how to synchronize movements, anticipate shots, and strategize effectively with your partner for a winning game.            
+            </li>
+            <li class="whitespace-pre-line">
+                <strong>4.Fun and Motivation:</strong>
+                Experience the joy of learning and improving together. Adult pair lessons inject an element of fun into tennis training, keeping motivation high and fostering a positive atmosphere that encourages continuous growth.            
+            </li>
+            <li class="whitespace-pre-line">
+                <strong>5.Individual Skill Enhancement:</strong>
+                Though the lessons are in pairs, individual skill enhancement remains a key focus. Coaches can tailor instruction to address the unique strengths and weaknesses of each person within the pair. This personalized attention ensures that both players experience growth in their tennis abilities.            
+            </li>
+            <li class="whitespace-pre-line">
+                <strong>6.Variety in Drills:</strong>
+                Enjoy a diverse range of drills that capitalize on the dynamic between partners. From coordinated serves to synchronized net play, these lessons offer a rich tapestry of activities designed to enhance your collective skills.            
+            </li>
+        </ul>
+      </div>
+    </div>
+    
+
+    <div class="max-w-full w-full items-center py-6 text-balance justify-center px-3 md:px-40">
+        <h1 class="text-4xl font-medium text-center text-black">PRICING</h1>
+        <p
+          class="mt-10 text-xl leading-8 text-center whitespace-normal text-black px-4 md:px-20 max-md:mt-10 max-md:max-w-full">
+        Once you've picked a date for your first pair tennis class, you just make a one-time payment of $100. This covers both individuals for a full hour of lessons, where they'll play and learn together.     
+     </div>
+
+      <div
+      class="flex justify-center items-center self-stretch px-16 py-12 mt-4 w-full font-medium text-center text-black max-md:px-5 max-md:mt-10 max-md:max-w-full">
+      <div
+        class="flex flex-col items-center mt-32 mb-32 max-w-full w-[637px] max-md:my-10">
+        <p
+          class="self-stretch text-6xl leading-[52.48px] max-md:max-w-full max-md:text-4xl"
+        >
+          Interested? Book Now!
+        </p>
+        <p
+          class="mt-20 text-xl leading-7 w-full max-md:mt-10 max-md:max-w-full"
+        >
+          Dive into endless possibilities! Click to sign up now.
+        </p>
+        <button
+          data-modal-target="default-modal"
+          data-modal-toggle="default-modal"
+          class="block justify-center items-center px-16 py-6 mt-10 max-w-full text-lg text-white bg-black rounded-md w-[280px] max-md:px-5 text-center hover:bg-slate-500 transition-colors"
+          type="button"
+        >
+          Sign Up
+        </button>
+
+        <!-- Main modal -->
+        <div
+          id="default-modal"
+          tabindex="-1"
+          aria-hidden="true"
+          class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full transition-opacity duration-300 ease-in-out"
+        >
+          <div class="relative p-4 w-full max-w-2xl max-h-full">
+            <div class="bg-white w-full h-full px-10 py-5 flex flex-col">
+              <button
+                data-modal-hide="default-modal"
+                type="button"
+                class="self-end"
+              >
+                <img
+                  src="img/4115230_cancel_close_delete_icon.png"
+                  alt="Close Modal"
+                />
+              </button>
+              <script
+                src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer
+              ></script>
+              <div
+                class="elfsight-app-a8999764-c0b2-4d57-b572-58975681d1f5" data-elfsight-app-lazy
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+
+    <!-- Footer Start -->
+    <footer>
+      <div
+        class="max-w-full bg-[#25a4ee] self-stretch flex w-full flex-col justify-center items-center px-16 py-12 max-md:max-w-full max-md:px-5"
+      >
+        <div
+          class="flex w-full max-w-[1110px] justify-between gap-5 mt-20 mb-10 items-start max-md:max-w-full max-md:flex-wrap max-md:mt-10"
+        >
+          <div class="flex flex-col items-stretch">
+            <!-- <span class="text-yellow-200 [text-shadow:2px_2px_2px_var(--tw-shadow-color)] shadow-slate-400 text-3xl font-bold uppercase my-auto"
+            style="font-family: 'M PLUS Rounded 1c';">
+            FUN TENNIS
+          </span> -->
+            <img
+              src="img/logo-removebg-preview.png"
+              class="max-md:w-70 md:h-20 max-sm:w-48 -ml-2"
+            />
+            <div class="text-black text-sm leading-5 mt-7">© 2010 — 2020</div>
+            <div class="text-black text-sm leading-5 whitespace-nowrap mt-6">
+              All Rights Reserved
+            </div>
+          </div>
+          <div
+            class="self-stretch flex items-start justify-between gap-5 max-md:max-w-full max-md:flex-wrap"
+          >
+            <div class="self-stretch flex flex-col items-stretch">
+              <div class="text-black text-sm font-bold leading-5">MENU</div>
+              <div class="text-black text-sm leading-5 mt-9">Home</div>
+              <div class="text-black text-sm leading-5 whitespace-nowrap mt-7">
+                Lessons
+              </div>
+              <div class="text-black text-sm leading-5 whitespace-nowrap mt-7">
+                Train with Us
+              </div>
+              <div class="text-black text-sm leading-5 mt-7">Blog</div>
+            </div>
+            <div class="flex grow flex-col items-stretch self-start">
+              <div class="text-black text-sm font-bold leading-5">INFO</div>
+              <div class="text-black text-sm leading-5 mt-9">About Us</div>
+              <div class="text-black text-sm leading-5 mt-7">
+                Privacy policy
+              </div>
+              <div class="text-black text-sm leading-5 whitespace-nowrap mt-6">
+                Terms and conditions
+              </div>
+            </div>
+            <div class="flex basis-[0%] flex-col items-stretch self-start">
+              <div
+                class="text-black text-sm font-bold leading-5 whitespace-nowrap"
+              >
+                ACCOUNT
+              </div>
+              <div class="text-black text-sm leading-5 whitespace-nowrap mt-9">
+                My account
+              </div>
+              <div class="text-black text-sm leading-5 mt-6">FAQ</div>
+            </div>
+            <div class="flex-grow flex-col items-center self-start">
+              <div
+                class="text-black text-sm font-bold leading-5 whitespace-nowrap"
+              >
+                SOCIAL
+              </div>
+              <div class="flex mt-2 items-start">
+                <a href="https://www.instagram.com/funtennis.sg/"
+                  ><img
+                    class="aspect-square object-contain object-center w-10 h-10 overflow-hidden max-w-full"
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/d49c834ee0249f2f54b9efa75b6111fdf0de4eefaad655978bd3d681c0c2a748?apiKey=a2ab9e7083ae495bb6bdcc051a57be6e&"
+                    alt="Instagram"
+                /></a>
+                <a href="https://www.youtube.com/@funtennis2875"
+                  ><img
+                    class="aspect-square object-contain object-center w-10 h-10 overflow-hidden max-w-full ml-2"
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/78fd881cd5328c5b3e64f6c1081a544ca0a41d555f6e90551836cdd153a38598?apiKey=a2ab9e7083ae495bb6bdcc051a57be6e&"
+                    alt="YouTube"
+                /></a>
+                <!-- <a href="#"><img
+                  class="aspect-[0.97] object-contain object-center w-[35px] h-[35px] overflow-hidden max-w-full ml-2"
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/152932d5204cf80aaf470f2fbe54226df4edd0be2b9064403ce08e2ceb509057?apiKey=a2ab9e7083ae495bb6bdcc051a57be6e&"
+                  alt="X"></a> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Footer End -->
+
+    <script>
+        function rotateButton(buttonId) {
+            const buttonIcon = document.getElementById(buttonId);
+            buttonIcon.classList.toggle('rotate-180');
+        }
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var introSection = document.getElementById("intro-section");
+        var videoSection = document.getElementById("video-section");
+        var signUpSection = document.getElementById("sign-up-section");
+        var navigationBar = document.querySelector("nav");
+      
+        // Handle scroll behavior
+        function handleScroll() {
+          // Get the bounding rectangles of sections
+          var introSectionRect = introSection.getBoundingClientRect();
+          var videoSectionRect = videoSection.getBoundingClientRect();
+          var signUpSectionRect = signUpSection.getBoundingClientRect();
+      
+          var introSectionBottom = introSectionRect.bottom;
+          var videoSectionBottom = videoSectionRect.bottom;
+          var signUpSectionBottom = signUpSectionRect.bottom;
+      
+          if (window.innerWidth > 768) {
+            if (introSectionBottom < 0 && videoSectionBottom > 0) {
+              hideNavigationBar();
+            } else if (signUpSectionBottom < 0) {
+              hideNavigationBar();
+            } else {
+              showNavigationBar();
+            }
+          } else {
+            if (signUpSectionBottom < 0) {
+              hideNavigationBar();
+            } else {
+              showNavigationBar();
+            }
+          }
+        }
+      
+        // Function to hide navigation bar
+        function hideNavigationBar() {
+          navigationBar.style.opacity = "0";
+          navigationBar.style.top = "-100px";
+        }
+      
+        // Function to show navigation bar
+        function showNavigationBar() {
+          navigationBar.style.opacity = "1";
+          navigationBar.style.top = "0";
+        }
+      
+        // Add event listener for scroll
+        window.addEventListener("scroll", handleScroll);
+      
+        // Trigger the handleScroll function once on page load
+        handleScroll();
+      });
+      </script>
+      
+      <script>
+        function Menu(e) {
+          let list = document.querySelector('ul');
+      
+          function toggleIcon() {
+            if (e.name === 'menu') {
+              e.name = "close";
+            } else if (e.name === 'close') {
+              e.name = "menu";
+            }
+          }
+      
+          if (e.name === 'menu') {
+            e.name = "close";
+            list.classList.add('top-[60px]', 'opacity-100');
+          } else if (e.name === 'close') {
+            e.name = "menu";
+            list.classList.remove('top-[60px]', 'opacity-100');
+          }
+      
+          document.addEventListener('click', (event) => {
+            if (!list.contains(event.target) && event.target !== e) {
+              list.classList.remove('opacity-100', 'top-[60px]');
+              list.classList.add('opacity-0');
+              list.addEventListener('transitionend', toggleIcon, { once: true });
+            }
+          });
+        }
+      </script>
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+
+  </body>
+</html>
