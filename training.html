@@ -1,11 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fun Tennis</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500&family=Nunito:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+  <script
+    type="module"
+    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+  ></script>
+  <script
+    nomodule
+    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+  ></script>
 </head>
 <body>
-    This page is currently being updated
+    <nav id="navbar" class="bg-[#25a4ee] max-w-full fixed z-50 w-full top-0 pl-10 pr-6 py-3 shadow-md md:flex md:items-center md:justify-between transition-all ease-in duration-500">
+        <div class="flex justify-between items-center ">
+            <a href="index.html">
+              <!-- <span class="text-yellow-200 [text-shadow:2px_2px_2px_var(--tw-shadow-color)] shadow-slate-400 text-3xl font-bold uppercase my-auto"
+                style="font-family: 'M PLUS Rounded 1c';">
+                FUN TENNIS
+              </span> -->
+      
+              <img src="img/logo-removebg-preview.png" class="max-md:w-70 max-lg:w-80 shrink-0 lg:h-20 md:h-20 max-sm:w-48 -ml-2">
+            </a>
+            <span class="text-3xl cursor-pointer mx-2 md:hidden block">
+              <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+            </span>
+          </div>
+      
+          <ul
+            class="bg-[#25a4ee] md:flex md:items-center z-[-1] md:z-auto md:static absolute w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
+            <li class="mx-4 my-6 md:my-0">
+              <a href="index.html" class="block text-xl hover:text-cyan-400 duration-500">Home</a>
+            </li>
+            <li class="mx-4 my-6 md:my-0">
+              <button id="lesson-dropdown-button" 
+              data-collapse-toggle="lesson-dropdown"
+              onclick="rotateButton('button-icon-lesson')" 
+              class="flex items-center justify-between text-xl w-full md:w-auto hover:text-cyan-400 duration-500">Lessons <svg id="button-icon-lesson" class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+              </svg></button>
+      
+              <div id="lesson-dropdown" class="absolute hidden mt-1 border-gray-200 shadow-sm bg-gray-50 md:bg-white dark:bg-gray-800 dark:border-gray-600">
+                <div class="flex-col px-4 py-5 mx-auto text-gray-900 dark:text-white sm:grid-cols-2 md:px-6">
+                    <ul>
+                        <li>
+                          <div class="flex items-center justify-between gap-[58px]">
+                            <a href="kid-lesson.html" class="block text-xl hover:text-cyan-400 duration-500 whitespace-nowrap">Kid Lessons</a>
+                            <button id="lesson-dropdown-button" 
+                            data-collapse-toggle="kid-lesson-dropdown"
+                            onclick="rotateButton('button-icon-kid-lesson')"  
+                            class="flex items-center justify-between text-xl w-full md:w-auto hover:text-cyan-400 duration-500">
+                              <svg id="button-icon-kid-lesson" class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                            </svg></button>
+                          </div>                  
+                          <div id="kid-lesson-dropdown" class="mt-1 hidden md:visible border-gray-200 shadow-sm bg-gray-50 md:bg-white border-y dark:bg-gray-800 dark:border-gray-600">
+                            <div class="flex-col px-4 py-5 mx-auto text-gray-900 dark:text-white sm:grid-cols-2 md:px-6">
+                                <ul>
+                                    <li>
+                                      <a href="kid-private.html" class="block text-xl hover:text-cyan-400 duration-500">Kid Private 1-1</a>
+                                    </li>
+                                    <li>
+                                      <a href="kid-pair.html" class="block text-xl hover:text-cyan-400 duration-500">Kid Pair</a>
+                                    </li>
+                                    <li>
+                                      <a href="kid-group.html" class="block text-xl hover:text-cyan-400 duration-500">Kid Group</a>
+                                    </li>
+                                </ul>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="flex items-center justify-between gap-[40px]">
+                            <a href="adult-lesson.html" class="block text-xl hover:text-cyan-400 duration-500 whitespace-nowrap">Adult Lessons</a>
+                            <button id="adult-lesson-dropdown-button" 
+                            data-collapse-toggle="adult-lesson-dropdown" 
+                            onclick="rotateButton('button-icon-adult-lesson')"  
+                            class="flex text-xl w-full md:w-auto hover:text-cyan-400 duration-500">
+                              <svg id="button-icon-adult-lesson" class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                            </svg></button>
+                          </div>
+                          <div id="adult-lesson-dropdown" class="mt-1 hidden md:visible border-gray-200 shadow-sm bg-gray-50 md:bg-white border-y dark:bg-gray-800 dark:border-gray-600">
+                            <div class="flex-col px-4 py-5 mx-auto text-gray-900 dark:text-white sm:grid-cols-2 md:px-6">
+                                <ul>
+                                    <li>
+                                      <a href="adult-private.html" class="block text-xl hover:text-cyan-400 duration-500">Adult Private 1-1</a>
+                                    </li>
+                                    <li>
+                                      <a href="adult-pair.html" class="block text-xl hover:text-cyan-400 duration-500">Adult Pair</a>
+                                    </li>
+                                    <li>
+                                      <a href="adult-group.html" class="block text-xl hover:text-cyan-400 duration-500">Adult Group</a>
+                                    </li>
+                                </ul>
+                            </div>
+                          </div>
+                        </li>
+                    </ul>
+                </div>
+              </div>
+            </li>
+            <li class="mx-4 my-6 md:my-0">
+              <a href="training.html" class="block text-xl hover:text-cyan-400 duration-500">Training</a>
+              <!-- <button id="training-dropdown-button" data-collapse-toggle="training-dropdown" class="flex items-center justify-between text-xl w-full md:w-auto hover:text-cyan-400 duration-500">
+                <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+              </svg></button> -->
+            </li>
+            <li class="mx-4 my-6 md:my-0">
+              <a href="blog.html" class="block text-xl hover:text-cyan-400 duration-500">Blog</a>
+            </li>
+            <li class="mx-4 my-6 md:my-0">
+              <a href="faq.html" class="block text-xl hover:text-cyan-400 duration-500">FAQS</a>
+            </li>
+            <li class="mx-4 my-6 md:my-0">
+              <a href="about-us.html" class="block text-xl hover:text-cyan-400 duration-500">About Us</a>
+            </li> 
+      
+            <a href="sign-up.html">
+              <div
+              class="bg-black text-white duration-300 hover:bg-slate-500 text-center text-lg leading-6 items-stretch mx-4 px-10 py-3 rounded-md max-md:px-5">
+              Sign In
+            </div>
+            </a>
+          </ul>
+        </div>
+      
+        </nav>
+
+        <script>
+          function rotateButton(buttonId) {
+              const buttonIcon = document.getElementById(buttonId);
+              buttonIcon.classList.toggle('rotate-180');
+          }
+      </script>
+      
+        
+        <script>
+          function Menu(e) {
+            let list = document.querySelector('ul');
+        
+            function toggleIcon() {
+              if (e.name === 'menu') {
+                e.name = "close";
+              } else if (e.name === 'close') {
+                e.name = "menu";
+              }
+            }
+        
+            if (e.name === 'menu') {
+              e.name = "close";
+              list.classList.add('top-[60px]', 'opacity-100');
+            } else if (e.name === 'close') {
+              e.name = "menu";
+              list.classList.remove('top-[60px]', 'opacity-100');
+            }
+        
+            document.addEventListener('click', (event) => {
+              if (!list.contains(event.target) && event.target !== e) {
+                list.classList.remove('opacity-100', 'top-[60px]');
+                list.classList.add('opacity-0');
+                list.addEventListener('transitionend', toggleIcon, { once: true });
+              }
+            });
+          }
+        </script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
 </body>
 </html>
