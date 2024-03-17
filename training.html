@@ -151,7 +151,7 @@
     </p>
     </div>
 
-<div>
+<!-- <div>
 
 	<link rel="dns-prefetch" href="//unpkg.com" />
 	<link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
@@ -231,10 +231,10 @@
 									:class="{'bg-blue-500 text-white': isToday(date) == true, 'text-gray-700 hover:bg-blue-200': isToday(date) == false }"	
 								></div>
 								<div style="height: 80px;" class="overflow-y-auto mt-1">
-									<!-- <div 
+									<div 
 										class="absolute top-0 right-0 mt-2 mr-2 inline-flex items-center justify-center rounded-full text-sm w-6 h-6 bg-gray-700 text-white leading-none"
 										x-show="events.filter(e => e.event_date === new Date(year, month, date).toDateString()).length"
-										x-text="events.filter(e => e.event_date === new Date(year, month, date).toDateString()).length"></div> -->
+										x-text="events.filter(e => e.event_date === new Date(year, month, date).toDateString()).length"></div>
 
 									<template x-for="event in events.filter(e => new Date(e.event_date).toDateString() ===  new Date(year, month, date).toDateString() )">	
 										<div
@@ -258,7 +258,6 @@
 			</div>
 		</div>
 
-		<!-- Modal -->
 		<div style=" background-color: rgba(0, 0, 0, 0.8)" class="fixed z-40 top-0 right-0 left-0 bottom-0 h-full w-full" x-show.transition.opacity="openEventModal">
 			<div class="p-4 max-w-xl mx-auto relative left-0 right-0 overflow-hidden mt-24">
 				<div class="shadow absolute right-0 top-0 w-10 h-10 rounded-full bg-white text-gray-500 hover:text-gray-800 inline-flex items-center justify-center cursor-pointer"
@@ -309,7 +308,6 @@
 				</div>
 			</div>
 		</div>
-		<!-- /Modal -->
 	</div>
 
 	<script>
@@ -435,13 +433,30 @@
 			}
 		}
 	</script>
-  </div>
+</div> -->
+
+<div class="mt-12 justify-center shrink-0 px-6 md:px-48">
+  <img src="img/best-tennis-rackets.jpg" class="object-cover w-full h-full">
+</div>
+
+<div
+class="justify-center items-center self-stretch text-balance px-3 md:px-56 pt-16 pb-20 w-full"
+>
+<p
+  class="text-xl leading-8 mt-6 text-black bg-white max-md:px-5 max-md:max-w-full whitespace-normal"
+>
+At Fun Tennis, we are passionate about tennis and committed to helping players of all levels enhance their skills and enjoyment of the game. Whether you're a beginner looking to grasp the fundamentals or an advanced player seeking to refine your technique, our comprehensive coaching program caters to individuals at every stage of their tennis journey.
+  <br />
+  <br />
+  Our coaching program is designed to provide personalized instruction tailored to your specific needs and goals. We offer a range of classes and sessions that accommodate various proficiency levels, ensuring that every player receives the attention and guidance necessary to improve their game.
+</p>
+</div>
 
   <section>
     <div
-      class="max-w-full mt-64 bg-white self-stretch flex w-full flex-col justify-center items-center px-16 py-12 max-md:max-w-full max-md:px-5">
+      class="max-w-full bg-white self-stretch flex w-full flex-col justify-center items-center px-16 py-12 max-md:max-w-full max-md:px-5">
       <div class="flex w-full max-w-[1170px] flex-col items-stretch mt-6 mb-24 max-md:max-w-full max-md:mb-10">
-        <h2 class="text-black font-medium text-center text-2xl self-center flex">
+        <h2 class="text-black font-medium text-center text-3xl self-center flex">
           Levels
         </h2>
         <p class="text-black text-center text-lg leading-7 self-center max-w-[800px] mt-9 max-md:max-w-full">
@@ -451,56 +466,41 @@
           <div class="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
             <div class="flex flex-col items-stretch w-[33%] max-md:w-full max-md:ml-0">
               <div class="flex grow flex-col max-md:mt-8">
-                <div class="bg-black self-stretch flex shrink-0 h-[370px] flex-col">
+                <div class="bg-black w-[350px] shrink-0 h-[370px] flex-col">
                   <img src="img/beginner.jpg" class="w-full h-full object-cover">
                 </div>
                 <p class="text-black text-center text-3xl font-medium leading-10 self-center flex mt-9">
                   Beginner
                 </p>
-                <p class="text-black text-2xl leading-8 self-stretch mt-12 max-md:mt-10">
-                  Embark on your tennis journey with our beginner lessons, designed for those eager to dive into the sport or adopt a more active lifestyle.
+                <p class="text-black text-lg md:text-2xl leading-8 self-stretch mt-12 max-md:mt-10">
+                  If you're new to tennis, our beginner classes focus on fundamental skills such as grip, stance, and basic strokes. Our patient instructors will guide you through each step, helping you build a strong foundation for future improvement.
                 </p>
-                <!-- <ul class="text-black text-2xl leading-8 self-stretch mt-12 max-md:mt-10">
-                  <li>
-                    Dive into tennis with beginner lessons tailored for all.
-                  </li>
-                  <li>
-                    Master groundstrokes, volleys, and serves over four comprehensive sessions.
-                  </li>
-                  <li>
-                    Master groundstrokes, volleys, and serves over four comprehensive sessions.
-                  </li>
-                  <li>
-                    Get acquainted with tennis equipment and terminology.
-                  </li>
-                </ul> -->
               </div>
             </div>
             <div class="flex flex-col items-stretch w-[33%] ml-5 max-md:w-full max-md:ml-0">
               <div class="flex grow flex-col max-md:mt-8">
-                <div class="bg-black self-stretch flex shrink-0 h-[370px] flex-col">
+                <div class="bg-black w-[350px] shrink-0 h-[370px] flex-col">
                   <img src="img/intermediate.jpg" class="w-full h-full object-cover">
                 </div>
                 <p class="text-black text-center text-3xl font-medium leading-10 self-center flex mt-9">
                   Intermediate
                 </p>
-                <p class="text-black text-2xl leading-8 self-stretch mt-12 max-md:mt-10">
-                  Transition to intermediate lessons with Fun Tennis to elevate your game. Discover advanced techniques like slice shots, drop shots, and mastering balls on the rise.
+                <p class="text-black text-lg md:text-2xl leading-8 self-stretch mt-12 max-md:mt-10">
+                  For players with some experience on the court, our intermediate classes offer opportunities to refine your technique and strategy. Whether you're working on consistency, footwork, or developing your shot selection, our coaches will provide targeted instruction to help you progress.               
                 </p>
-                
               </div>
             </div>
             <div class="flex flex-col items-stretch w-[33%] ml-5 max-md:w-full max-md:ml-0">
               <div class="flex grow flex-col max-md:mt-8">
-                <div class="bg-black self-stretch flex shrink-0 h-[370px] flex-col">
+                <div class="bg-black w-[350px] shrink-0 h-[370px] flex-col">
                   <img src="img/advanced.jpg" class="w-full h-full object-cover">
                 </div>
                 <p class="text-black text-center text-3xl font-medium leading-10 self-center flex mt-9">
                   Advanced
                 </p>
-                <p class="text-black text-2xl leading-8 self-stretch mt-10">
-                  Elevate your game with our advanced tennis classes, designed to mold you into a versatile player. Our experienced coaches will refine your shots, instilling confidence in your on-court abilities.                </p>
-                
+                <p class="text-black text-lg md:text-2xl leading-8 self-stretch mt-10">
+                  Our advanced coaching sessions are tailored to the needs of competitive players seeking to elevate their game to the next level. From tactical analysis and match play strategies to mental toughness training, our coaches will help you maximize your potential and achieve your goals.
+                </p>                
               </div>
             </div>
           </div>
